@@ -1,4 +1,4 @@
-//Padrão Criacional
+package Builder;//Padrão Criacional
 
 //Criar uma classe geral
 abstract class Veiculo{
@@ -26,7 +26,7 @@ class Ferrari extends Veiculo{
 
     public Ferrari(String modelo) {
         super(modelo, "Esportivo");
-        this.nome = "Ferrari";
+        this.nome = "Builder.Ferrari";
     }
 
     public String toString(){
@@ -38,7 +38,7 @@ class Jeep extends Veiculo{
 
     public Jeep(String modelo) {
         super(modelo, "Utilitario");
-        this.nome = "Jeep";
+        this.nome = "Builder.Jeep";
     }
 
     public String toString(){

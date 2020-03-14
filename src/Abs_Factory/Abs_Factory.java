@@ -1,7 +1,8 @@
-import javax.jws.WebParam;
+package Abs_Factory;
+
 import java.util.Scanner;
 // nesse padrão são as fabriicas que me retornam o que eu quero
-//Classe Pet
+//Classe Abs_Factory.Pet
 abstract class Pet{
     private String nome;
 
@@ -12,7 +13,7 @@ abstract class Pet{
         return nome;
     }
 }
-// a familia pet é divida em dois grupos, Cachorro e gato
+// a familia pet é divida em dois grupos, Abs_Factory.Cachorro e gato
 abstract class Cachorro extends Pet{
 
     public Cachorro(String nome) {
@@ -30,21 +31,21 @@ abstract class Gato extends Pet{
 class Shitzu extends Cachorro{
 
     public Shitzu() {
-        super("Shitzu");
+        super("Abs_Factory.Shitzu");
     }
 }
 //Anima ideal para guarda
 class Pastor extends Cachorro{
 
     public Pastor() {
-        super("Pastor");
+        super("Abs_Factory.Pastor");
     }
 }
 // animal ideal para compania
 class Persa extends Gato{
 
     public Persa() {
-        super("Persa");
+        super("Abs_Factory.Persa");
     }
 }
 //Anima ideal para guarda
@@ -52,10 +53,10 @@ class Persa extends Gato{
 class RagDoll extends Gato{
 
     public RagDoll() {
-        super("RagDoll");
+        super("Abs_Factory.RagDoll");
     }
 }
-//Modelo de Cachorro e Gatos
+//Abs_Factory.Modelo de Abs_Factory.Cachorro e Gatos
 interface Modelo{
     Cachorro getCachorro();
     Gato getGato();
@@ -105,8 +106,8 @@ public class Abs_Factory {
             case 1: modelo = new FabricaCompanhia(); break;
             case 2: modelo = new FabricaGuarda();break;
         }
-        System.out.println("Cachorro: "+ modelo.getCachorro() );
-        System.out.println("Gato: "+ modelo.getGato() );
+        System.out.println("Abs_Factory.Cachorro: "+ modelo.getCachorro() );
+        System.out.println("Abs_Factory.Gato: "+ modelo.getGato() );
     }
 
 }
